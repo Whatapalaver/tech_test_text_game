@@ -1,22 +1,17 @@
-Ruby Project Starter Template with Sinatra
+Multi-path text story - a tech test using Ruby and Sinatra
 ====
 
-This is a boilerplate template for a very simple Ruby web app project. It includes rspec, simplecov and a rubocop linter from Makers. [Pry](https://github.com/pry/pry) installed for debugging.
+_Please write a web application which enables the user to write "multi-path stories." A multi-path story is composed of sentences. After each sentence, there are up to four possible next sentences, and after each of those, another four possible next sentences, and so on._
 
-It also has sinatra installed (and shotgun for automatic reloading) and the basics for an MVC structure.
-Model = lib
-View = Views
-Controller = app.rb
+_Here's a [short screencast](http://oneis-recruitment.s3.amazonaws.com/2014/stories-web-app.mp4) which illustrates the application_
 
-I've created a dummy 'starter-code' template so that all the test files can be linked up. Just change the names or delete and start from scratch.
-
-I've set up the config.ru files and Procfile so that it should deploy successfully to Heroku.
+___
 
 To Use:
 ---
 
-- Clone or fork this project `git clone https://github.com/Whatapalaver/boilerplate_templates.git`
-- Change into the directory `cd Ruby/ruby_rspec`
+- Clone or fork this project `git clone https://github.com/Whatapalaver/multi_path_text_game`
+- Change into the directory `cd multi_path_text_game`
 - You may want to copy files to your own project folder
 - Install dependencies `bundle install`
 - You should also create a .gitignore file to prevent all the coverage files being sent to github: `echo "coverage" >> .gitignore`  
