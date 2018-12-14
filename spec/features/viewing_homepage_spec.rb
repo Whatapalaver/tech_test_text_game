@@ -3,8 +3,9 @@ describe "the homepage", type: :feature do
     
   end
 
-  it "displays Hello world" do
+  it "Inludes 'Back to the start'" do
     visit '/'
-    expect(page).to have_content 'Hello world!'
+    expect(page).to have_content 'Back to the start'
   end
+  
 end
