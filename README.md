@@ -26,7 +26,7 @@ Initially I planned to create a new Option object each time the submit button wa
 Areas requiring further development
 ---
 
-App.rb currently includes defines POST handlers for each of the 4 potential options. This results in significant repetition of code. I suspect I should handle this in a single POST handler that takes a further parameter to define which Option is being created.
+App.rb currently defines POST handlers for each of the 4 potential options. This results in significant repetition of code. I suspect I should handle this in a single POST handler that takes a further parameter to define which Option is being created.
 
 Now that my Option initialisation also initialises a blank Page I have created some circularity where both the Page and the Option need to know about each other. I have handled that in App.rb POST route where I push details of the Option into the Page object and in turn push these to the Story object. This doesn't feel like a good implementation and is also probably too much logic to be contained in the controller. 
 
@@ -45,9 +45,9 @@ To Use
 - Clone or fork this project `git clone https://github.com/Whatapalaver/multi_path_text_game`
 - Change into the directory `cd multi_path_text_game`
 - You may want to copy files to your own project folder
-- Install dependencies `bundle install`
-- You should also create a .gitignore file to prevent all the coverage files being sent to github: `echo "coverage" >> .gitignore`  
+- Install dependencies `bundle install`  
 - to run the server `rackup config.ru`
+- open `http://localhost:9292` in your browser to start writing your story
 
 To test
 ---
