@@ -4,7 +4,7 @@
     <td></td>
     <td>
       <% if @page.option1.nil? %>
-        <form action="">
+        <form action='/pages/<%= @pageid %>/option1' method='post'>
           <input type="text" name="option1"><br>
           <input type="submit" value="Submit">
         </form>
@@ -17,7 +17,7 @@
   <tr>
     <td>
       <% if @page.option4.nil? %>
-        <form action="">
+        <form action='/pages/<%= @pageid %>/option4' method='post'>
           <input type="text" name="option4"><br>
           <input type="submit" value="Submit">
         </form>
@@ -28,7 +28,7 @@
     <td><%= @page.chapter %></td> 
     <td>
       <% if @page.option2.nil? %>
-        <form action="">
+        <form action='/pages/<%= @pageid %>/option2' method='post'>
           <input type="text" name="option2"><br>
           <input type="submit" value="Submit">
         </form>
@@ -41,7 +41,7 @@
     <td></td>
     <td>
       <% if @page.option3.nil? %>
-        <form action="">
+        <form action='/pages/<%= @pageid %>/option3' method='post'>
           <input type="text" name="option3"><br>
           <input type="submit" value="Submit">
         </form>
