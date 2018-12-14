@@ -1,38 +1,54 @@
-<p>Back to the start</p>
+<a href="/pages/0">Back to the start</a>
 <table style="width:75%", border="1">
   <tr>
     <td></td>
     <td>
-      <form action="/option1" method="post">
-        <input type="text" name="option1"><br>
-        <input type="submit" value="Submit">
-      </form>
+      <% if @page.option1.nil? %>
+        <form action="">
+          <input type="text" name="option1"><br>
+          <input type="submit" value="Submit">
+        </form>
+      <% else %>
+        <%= @page.option1.text %>
+      <% end %>
     </td> 
     <td></td>
   </tr>
   <tr>
     <td>
-      <form action="">
-        <input type="text" name="option4"><br>
-        <input type="submit" value="Submit">
-      </form>
+      <% if @page.option4.nil? %>
+        <form action="">
+          <input type="text" name="option4"><br>
+          <input type="submit" value="Submit">
+        </form>
+      <% else %>
+        <%= @page.option4.text %>
+      <% end %>
     </td>
     <td><%= @page.chapter %></td> 
     <td>
-      <form action="">
-        <input type="text" name="option2"><br>
-        <input type="submit" value="Submit">
-      </form>
+      <% if @page.option2.nil? %>
+        <form action="">
+          <input type="text" name="option2"><br>
+          <input type="submit" value="Submit">
+        </form>
+      <% else %>
+        <%= @page.option2.text %>
+      <% end %>
     </td>
   </tr>
   <tr>
     <td></td>
     <td>
-      <form action="">
-        <input type="text" name="option3"><br>
-        <input type="submit" value="Submit">
-      </form>
-    </td> 
+      <% if @page.option3.nil? %>
+        <form action="">
+          <input type="text" name="option3"><br>
+          <input type="submit" value="Submit">
+        </form>
+      <% else %>
+        <%= @page.option3.text %>
+      <% end %>
+    </td>
     <td></td>
   </tr>
 </table>
