@@ -1,12 +1,9 @@
-Multi-path text story - a tech test using Ruby and Sinatra
+A Routing Challenge using Ruby and Sinatra
 ====
 
-Challenge Instructions:  
-_Please write a web application which enables the user to write "multi-path stories." A multi-path story is composed of sentences. After each sentence, there are up to four possible next sentences, and after each of those, another four possible next sentences, and so on._
+Challenge Instructions: 
 
-_Here's a [short screencast](http://oneis-recruitment.s3.amazonaws.com/2014/stories-web-app.mp4) which illustrates the application._
-
-_Take whatever shortcuts you need to make it possible to write the application in a reasonable amount of time, except for code quality. Don't bother with persistence, or making it look nice, but make sure you copy the user interface in the screencast._
+_Instructions were provided that required me to build an application that enabled the user to write their own option based story. I was sent a screencast demonstrating the game flow and asked to replicate the minimal styling._
 
 ___
 
