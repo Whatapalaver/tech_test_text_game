@@ -21,7 +21,7 @@ I created 3 classes from the outset:
 - A Page that held details of all 4 potential options. The previously selected Option becomes the current page chapter to be presented in the center of the page grid.
 - An Option that represents the story continuation and is the text field submitted by the user
 
-Initially I planned to create a new Option object each time the submit button was pressed and create a new Page object each time the Option link was selected. However, as you are unable to submit a POST request from an <a> link, I decided that I should create a new Page with every creation of a new Object. So these two taks are embedded in the `post '/pages/:pageid/option_?'` roots. This approach means that there are Pages that correspond to every Option regardless of whether they are ever clicked - it feels like a Schrodinger's cat solution where every potential outcome is already mapped.
+Initially I planned to create a new Option object each time the submit button was pressed and create a new Page object each time the Option link was selected. However, as you are unable to submit a POST request from an <a> link, I decided that I should create a new Page with every creation of a new Object. So these two taks are embedded in the `post '/pages/:pageid/option_?'` routes. This approach means that there are Pages that correspond to every Option regardless of whether they are ever clicked - it feels like a Schrodinger's cat solution where every potential outcome is already mapped.
 
 Areas requiring further development
 ---
