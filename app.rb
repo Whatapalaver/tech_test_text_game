@@ -25,54 +25,56 @@ class MyRackApp < Sinatra::Base
     erb :page
   end
 
-  post '/pages/:pageid/option1' do
+  post '/pages/:pageid/option_1' do
     @pageid = params[:pageid]
-    p @pageid
-    @page = @story.pages[@pageid.to_i]
-    @option1 = Option.new(params[:option1])
-    @page.option1 = @option1
-    redirect '/pages/@pageid'
+    @current_page = @story.pages[@pageid.to_i]
+    ## create new option based on input submitted
+    @option_1 = Option.new(params[:option_1])
+    ## store option in current page object
+    @current_page.options[0] = @option_1
+    ## create a new page object based on option created and update story object
+    @new_page = @option_1.page_link
+    @story.pages.push(@new_page)
+    redirect "/pages/#{@pageid}"
   end
 
-  post '/pages/:pageid/option2' do
+  post '/pages/:pageid/option_2' do
     @pageid = params[:pageid]
-    p @pageid
-    @page = @story.pages[@pageid.to_i]
-    @option2 = Option.new(params[:option2])
-    @page.option2 = @option2
-    redirect '/pages/@pageid'
+    @current_page = @story.pages[@pageid.to_i]
+    ## create new option based on input submitted
+    @option_2 = Option.new(params[:option_2])
+    ## store option in current page object
+    @current_page.options[1] = @option_2
+    ## create a new page object based on option created and update story object
+    @new_page = @option_2.page_link
+    @story.pages.push(@new_page)
+    redirect "/pages/#{@pageid}"
   end
 
-  post '/pages/:pageid/option3' do
+  post '/pages/:pageid/option_3' do
     @pageid = params[:pageid]
-    p @pageid
-    @page = @story.pages[@pageid.to_i]
-    @option3 = Option.new(params[:option3])
-    @page.option3 = @option3
-    redirect '/pages/@pageid'
+    @current_page = @story.pages[@pageid.to_i]
+    ## create new option based on input submitted
+    @option_3 = Option.new(params[:option_3])
+    ## store option in current page object
+    @current_page.options[2] = @option_3
+    ## create a new page object based on option created and update story object
+    @new_page = @option_3.page_link
+    @story.pages.push(@new_page)
+    redirect "/pages/#{@pageid}"
   end
 
-  post '/pages/:pageid/option4' do
+  post '/pages/:pageid/option_4' do
     @pageid = params[:pageid]
-    p @pageid
-    @page = @story.pages[@pageid.to_i]
-    @option4 = Option.new(params[:option4])
-    @page.option4 = @option4
-    redirect '/pages/@pageid'
+    @current_page = @story.pages[@pageid.to_i]
+    ## create new option based on input submitted
+    @option_4 = Option.new(params[:option_4])
+    ## store option in current page object
+    @current_page.options[3] = @option_4
+    ## create a new page object based on option created and update story object
+    @new_page = @option_4.page_link
+    @story.pages.push(@new_page)
+    redirect "/pages/#{@pageid}"
   end
-
-  # post '/bookmarks' do
-  #   if Bookmark.create(params)
-  #     flash[:success] = "Successfully added bookmark"
-  #   else
-  #     flash[:error] = "Please enter a valid URL"
-  #   end
-  #   redirect '/bookmarks'
-  # end
-
-  # post '/bookmarks/:id/delete' do
-  #   Bookmark.delete(params['id'])
-  #   redirect '/bookmarks'
-  # end
 
 end

@@ -3,50 +3,58 @@
   <tr>
     <td></td>
     <td>
-      <% if @page.option1.nil? %>
-        <form action='/pages/<%= @pageid %>/option1' method='post'>
-          <input type="text" name="option1"><br>
+      <% if @page.option_1.nil? %>
+        <form action='/pages/<%= @pageid %>/option_1' method='post'>
+          <input type="text" name="option_1"><br>
           <input type="submit" value="Submit">
         </form>
       <% else %>
-        <%= @page.option1.text %>
+        <a href="/pages/<%= @story.pageid(@page.option_1.page_link) %>">
+          <%= @page.option_1.text %>
+        </a>
       <% end %>
     </td> 
     <td></td>
   </tr>
   <tr>
     <td>
-      <% if @page.option4.nil? %>
-        <form action='/pages/<%= @pageid %>/option4' method='post'>
-          <input type="text" name="option4"><br>
+      <% if @page.option_4.nil? %>
+        <form action='/pages/<%= @pageid %>/option_4' method='post'>
+          <input type="text" name="option_4"><br>
           <input type="submit" value="Submit">
         </form>
       <% else %>
-        <%= @page.option4.text %>
+        <a href="/pages/<%= @story.pageid(@page.option_4.page_link) %>">
+          <%= @page.option_4.text %>
+        </a>
       <% end %>
     </td>
     <td><%= @page.chapter %></td> 
     <td>
-      <% if @page.option2.nil? %>
-        <form action='/pages/<%= @pageid %>/option2' method='post'>
-          <input type="text" name="option2"><br>
+      <% if @page.option_2.nil? %>
+        <form action='/pages/<%= @pageid %>/option_2' method='post'>
+          <input type="text" name="option_2"><br>
           <input type="submit" value="Submit">
         </form>
       <% else %>
-        <%= @page.option2.text %>
+        <a href="/pages/<%= @story.pageid(@page.option_2.page_link) %>">
+          <%= @page.option_2.text %>
+        </a>
       <% end %>
     </td>
   </tr>
   <tr>
     <td></td>
     <td>
-      <% if @page.option3.nil? %>
-        <form action='/pages/<%= @pageid %>/option3' method='post'>
-          <input type="text" name="option3"><br>
+      <% if @page.option_3.nil? %>
+        <form action='/pages/<%= @pageid %>/option_3' method='post'>
+          <input type="text" name="option_3"><br>
           <input type="submit" value="Submit">
         </form>
       <% else %>
-        <%= @page.option3.text %>
+        <a href="/pages/<%= @story.pageid(@page.option_3.page_link) %>">
+          <%= @page.option_3.text %>
+        </a>
       <% end %>
     </td>
     <td></td>

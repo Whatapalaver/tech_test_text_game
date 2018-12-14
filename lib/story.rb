@@ -17,8 +17,8 @@ class Story
     @pages = [@initial_page]
   end
 
-  # def page(index)
-  #   @page = @pages[index]
-  # end
+  def pageid(page)
+    @pageid = @pages.index(page)
+  end
 
 end

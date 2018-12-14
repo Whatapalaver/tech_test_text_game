@@ -2,7 +2,7 @@ require './lib/option'
 
 class Page
 
-  attr_accessor :options, :chapter, :option1, :option2, :option3, :option4
+  attr_accessor :options, :chapter
 
   def initialize(chapter)
     @options = Array.new(4)
