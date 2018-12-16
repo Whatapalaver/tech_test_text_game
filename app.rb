@@ -26,18 +26,11 @@ class MyRackApp < Sinatra::Base
   end
 
   post '/pages/:pageid/:formNum' do
-    @pageid = params[:pageid]
+    @page_id = params[:pageid].to_i
     @option_number = params[:formNum].to_i
-    @option_index = @option_number - 1
-    @current_page = @story.pages[@pageid.to_i]
-    ## create new option based on input submitted
-    @option = Option.new(params[:option])
-    ## store option in current page object
-    @current_page.options[@option_index] = @option
-    ## create a new page object based on option created and update story object
-    @new_page = @option.page_link
-    @story.pages.push(@new_page)
-    redirect "/pages/#{@pageid}"
+    @option_text = params[:option]
+    @story.option_submit(@page_id, @option_number, @option_text)
+    redirect "/pages/#{@page_id}"
   end
 
 end
