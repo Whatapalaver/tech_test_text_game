@@ -2,7 +2,7 @@ require './lib/page'
 
 class Story
 
-  attr_accessor :initial_page, :pages
+  attr_accessor :pages
 
   def self.create(opener)
     @game = Story.new(opener)
@@ -13,8 +13,8 @@ class Story
   end
 
   def initialize(opener)
-    @initial_page = Page.new(opener)
-    @pages = [@initial_page]
+    initial_page = Page.new(opener)
+    @pages = [initial_page]
   end
 
   def pageid(page)
