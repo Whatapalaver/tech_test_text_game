@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'rubocop', '0.56.0'
+gem 'rubocop', '0.71.0'
 gem 'sinatra'
 
 group :test do
